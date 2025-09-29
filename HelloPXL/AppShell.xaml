@@ -3,13 +3,34 @@
     x:Class="HelloPXL.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:HelloPXL"
+    xmlns:app="clr-namespace:HelloPXL"
+    xmlns:pages="clr-namespace:HelloPXL.Pages"
     Shell.FlyoutBehavior="Disabled"
     Title="HelloPXL">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!--Om de HelloPage te tonen moest het volgende aangepast worden: -->
+    <!--ContentTemplate="{DataTemplate local:MainPage}"   needs to change to    ContentTemplate="{DataTemplate local:HelloPage}" -->
+    <!--xmlns:local="clr-namespace:HelloPXL"    needs to change to xmlns:app="clr-namespace:HelloPXL"   en   xmlns:pages="clr-namespace:HelloPXL.Pages"-->
 
+
+    <!--Initieel-->
+    <!--<ShellContent
+        Title="Home"
+        Route="home"
+        ContentTemplate="{DataTemplate app:MainPage}" />-->
+
+    <!--Labo deel 1-->
+    <ShellContent
+        Title="Hello"
+        ContentTemplate="{DataTemplate pages:HelloPage}"
+        Route="Hello" />
+
+    <!--Labo deel 2-->
+    <!--<ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate pages:HomePage}"
+    Route="Home" />-->
+    
 </Shell>
+
+
