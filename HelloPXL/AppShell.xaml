@@ -5,19 +5,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:app="clr-namespace:HelloPXL"
     xmlns:pages="clr-namespace:HelloPXL.Pages"
-    Shell.FlyoutBehavior="Disabled"
+    
     Title="HelloPXL">
 
+    <!--Om tegelijkertijd via de drie streepjes naar de andere contentPages te kunnen gaan, moet onderstaande lijn code verwijderd worden in de Shell (tussen xmlnns:pages en title)-->
+    <!--Shell.FlyoutBehavior="Disabled"-->
+    
     <!--Om de HelloPage te tonen moest het volgende aangepast worden: -->
     <!--ContentTemplate="{DataTemplate local:MainPage}"   needs to change to    ContentTemplate="{DataTemplate local:HelloPage}" -->
     <!--xmlns:local="clr-namespace:HelloPXL"    needs to change to xmlns:app="clr-namespace:HelloPXL"   en   xmlns:pages="clr-namespace:HelloPXL.Pages"-->
 
 
     <!--Initieel-->
-    <!--<ShellContent
-        Title="Home"
-        Route="home"
-        ContentTemplate="{DataTemplate app:MainPage}" />-->
+    <ShellContent
+        Title="Main"
+        ContentTemplate="{DataTemplate app:MainPage}"
+        Route="Main" />
 
     <!--Labo deel 1-->
     <ShellContent
@@ -26,10 +29,10 @@
         Route="Hello" />
 
     <!--Labo deel 2-->
-    <!--<ShellContent
+    <ShellContent
     Title="Home"
     ContentTemplate="{DataTemplate pages:HomePage}"
-    Route="Home" />-->
+    Route="Home" />
     
 </Shell>
 
